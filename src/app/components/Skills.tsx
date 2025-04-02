@@ -1,114 +1,155 @@
 import React from 'react';
 
+interface skillsDataType {
+	name: string;
+	years: string;
+	description: string;
+	tags: string[];
+	fullWidth: boolean;
+}
 const Skills = () => {
-  return (
-    <section>
-      <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-800 pb-2 mb-6">SKILLS</h2>
-      
-      <div className="grid grid-cols-1 gap-6">
-        <div>
-          <div className="flex justify-between mb-2">
-            <h3 className="text-lg font-semibold text-gray-800">Python</h3>
-            <span className="text-gray-600">6 years</span>
-          </div>
-          <p className="text-gray-700 text-sm">
-            Utilized ML/DL models for training, developed data pipelines, packaged APIs, and set up AI APIs using gRPC and Flask to communicate with back-end services, with Celery managing GPU.
-          </p>
-          <div className="mt-2 flex flex-wrap">
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PyTorch</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Flask</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#cuda</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Celery</span>
-          </div>
-        </div>
+	// 定义技能数据
+	const skillsData: skillsDataType[] = [ 
+		{ 
+			name: "Python", 
+			years: "4 years", 
+			description: "熟悉使用Python進行網頁後端開發和數據分析，能夠實現各種演算法", 
+			tags: ["Flask","FastAPI","Django","matplotlib","Algorithm"],
+			fullWidth: true 
+		}, 
+		{ 
+			name: "React", 
+			years: "3 years", 
+			description: "擅長使用React框架開發app，以及熟悉其檔案架構(sigle resposibility, make component reusable)", 
+			tags: ["typescript","Next.js","TailwindCSS"], 
+			fullWidth: true 
+		}, 
+		{ 
+			name: "C++", 
+			years: "4 years", 
+			description: "熟悉C++程式語言，掌握指標的技巧及其應用", 
+			tags: [], 
+			fullWidth: true 
+		}, 
+		{ 
+			name: "Docker", 
+			years: "2 years", 
+			description: "用於建立、管理和運行應用程式容器，透過鏡像(image)和容器(container)實現應用隔離和部署", 
+			tags: [], 
+			fullWidth: false 
+		}, 
+		{ 
+			name: "Linux", 
+			years: "2 years", 
+			description: "熟悉Linux系統操作和AWS部署方案，能夠進行伺服器管理和維護", 
+			tags: [], 
+			fullWidth: false 
+		}, 
+		{ 
+			name: "Git", 
+			years: "2 years", 
+			description: "使用git進行版本控制以及多人協作", 
+			tags: [], 
+			fullWidth: false 
+		}, 
+		{ 
+			name: "Database", 
+			years: "2 years", 
+			description: "使用PostgreSQL進行資料整合和處理", 
+			tags: ["PostgreSQL"], 
+			fullWidth: false 
+		}, 
+		{ 
+			name: "Node.js", 
+			years: "2 years", 
+			description: "使用Node.js開發後端服務和API", 
+			tags: [], 
+			fullWidth: false 
+		}, 
+		{ 
+			name: "ASP.NET MVC", 
+			years: "1 years", 
+			description: "熟悉.NET開發高效能的平台", 
+			tags: [], 
+			fullWidth: false 
+		},
+		{ 
+			name: "ML & DL", 
+			years: "1 years", 
+			description: "LSTM, KNN, SVM, Transformer, Regression", 
+			tags: [], 
+			fullWidth: false 
+		} 
+	];
+	// 渲染单个技能项
+	const renderSkillItem = (skill: skillsDataType, index: number) => {
+		const baseClasses = skill.fullWidth ? "" : "grid grid-cols-1 md:grid-cols-3 gap-4";
+		
+		if (skill.fullWidth) {
+			return (
+				<div key={index}>
+					<div className="flex justify-between mb-2">
+						<h3 className="text-lg font-semibold text-gray-800">{skill.name}</h3>
+						<span className="text-gray-600">{skill.years}</span>
+					</div>
+					<p className="text-gray-700 text-sm">{skill.description}</p>
+					{skill.tags.length > 0 && (
+						<div className="mt-2 flex flex-wrap">
+							{skill.tags.map((tag: string, tagIndex: number) => (
+								<span key={tagIndex} className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+							))}
+						</div>
+					)}
+				</div>
+			);
+		} else {
+			return (
+				<div key={index}>
+					<div className="flex justify-between mb-2">
+						<h3 className="text-lg font-semibold text-gray-800">{skill.name}</h3>
+						<span className="text-gray-600">{skill.years}</span>
+					</div>
+					<p className="text-gray-700 text-sm">{skill.description}</p>
+					{skill.tags.length > 0 && (
+						<div className="mt-2 flex flex-wrap">
+							{skill.tags.map((tag: string, tagIndex: number) => (
+								<span key={tagIndex} className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+							))}
+						</div>
+					)}
+				</div>
+			);
+		}
+	};
 
-        <div>
-          <div className="flex justify-between mb-2">
-            <h3 className="text-lg font-semibold text-gray-800">R</h3>
-            <span className="text-gray-600">8 years</span>
-          </div>
-          <p className="text-gray-700 text-sm">
-            Conducted data preprocessing, feature engineering, and ML model building, while visualizing data with ggplot2. Established backend services using openCPU and rapache.
-          </p>
-          <div className="mt-2 flex flex-wrap">
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tidyverse</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#openCPU</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#datatable</span>
-            <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ggplot2</span>
-          </div>
-        </div>
+	// 渲染技能组
+	const renderSkillGroups = () => {
+		const fullWidthSkills = skillsData.filter(skill => skill.fullWidth);
+		const groupedSkills = skillsData.filter(skill => !skill.fullWidth);
+		
+		return (
+			<div className="grid grid-cols-1 gap-6">
+				{/* 渲染全宽技能 */}
+				{fullWidthSkills.map((skill, index) => renderSkillItem(skill, index))}
+				
+				{/* 渲染分组技能 */}
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+					{groupedSkills.slice(0, 3).map((skill, index) => renderSkillItem(skill, index + fullWidthSkills.length))}
+				</div>
+				
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+					{groupedSkills.slice(3).map((skill, index) => renderSkillItem(skill, index + fullWidthSkills.length + 3))}
+				</div>
+			</div>
+		);
+	};
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">Docker</h3>
-              <span className="text-gray-600">4 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Worked on Windows and macOS using WSL2 to maintain consistent environments by connecting to an Ubuntu server.
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">Linux</h3>
-              <span className="text-gray-600">6 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Skilled in using AWS, Azure OpenAI, and NVIDIA NIMs for cloud integration and deployment solutions.
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">Cloud</h3>
-              <span className="text-gray-600">4 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Influenced algorithm development, project setup, product packaging, and team communication.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">Database</h3>
-              <span className="text-gray-600">4 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Data access is primarily through PostgreSQL, and for large-scale data integration and processing, Hadoop is employed.
-            </p>
-            <div className="mt-2 flex flex-wrap">
-              <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#MS SQL</span>
-              <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ODBC</span>
-              <span className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HIVE</span>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">Gen AI</h3>
-              <span className="text-gray-600">2 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Stable diffusion, LLM, TTS, ASR, Llama3, RAG, RAGAs, Agents, LoRA, LangChain, llamaindex, Audio2Face, Wav2lip, Facefusion, Sadtalker, Unreal Engine, dify
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="text-lg font-semibold text-gray-800">ML & DL</h3>
-              <span className="text-gray-600">6 years</span>
-            </div>
-            <p className="text-gray-700 text-sm">
-              Random Forest, XGBoost, lightGBM, CatBoost, LSTM, GRU, DeepAR, KNN, SVM, Transformer, Regression, Causal Inference, MMM, A/B Testing, Uplift Model, PCA, SEM, Meta-Analysis, RCT
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+	return (
+		<section>
+			<h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-800 pb-2 mb-6">SKILLS</h2>
+			{renderSkillGroups()}
+		</section>
+	);
 };
 
 export default Skills; 
