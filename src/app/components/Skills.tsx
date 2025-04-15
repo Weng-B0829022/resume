@@ -83,7 +83,6 @@ const Skills = () => {
 	];
 	// 渲染单个技能项
 	const renderSkillItem = (skill: skillsDataType, index: number) => {
-		const baseClasses = skill.fullWidth ? "" : "grid grid-cols-1 md:grid-cols-3 gap-4";
 		
 		if (skill.fullWidth) {
 			return (
