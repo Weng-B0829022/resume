@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import SideProjects from './components/SideProjects';
 
 const Home = () => {
 	return (
@@ -19,6 +20,7 @@ const Home = () => {
 					<div>
 						<Education />
 						<Projects />
+						<SideProjects />
 						{/* <AdditionalExperience /> */}
 					</div>
 				</div>

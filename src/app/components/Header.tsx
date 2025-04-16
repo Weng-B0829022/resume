@@ -15,7 +15,7 @@ const Header = () => {
 						{/* Right Section - Profile Image */}
 					<div className="ml-8">
 						<img 
-							src="/photo1.jpg" 
+							src="/photo.jpg" 
 							alt="Profile" 
 							className="w-40 h-40 rounded-full object-cover"
 						/>

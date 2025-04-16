@@ -8,14 +8,7 @@ const projectsData = [
 		description: "使用React, go, postgres開發網頁平台",
 		organization: "智齡科技",
 		image: "jubo1.png"
-	},
-	{
-		title: "OmniNews",
-		period: "2024.07 – 2025.04",
-		description: "使用Next, Django, postgres開發網頁平台，串接Leonardo, OpenAI API集成的關鍵字影片合成平台",
-		organization: "好好聽FM",
-		image: "news1.png"
-	},
+	}
 ];
 
 const Projects = () => {
