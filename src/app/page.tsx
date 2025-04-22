@@ -8,7 +8,6 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import SideProjects from './components/SideProjects';
-import Link from 'next/link';
 import { ResumeData } from '../types/resume';
 
 const initialResumeData: ResumeData = {
@@ -16,6 +15,7 @@ const initialResumeData: ResumeData = {
 		name: "",
 		title: "",
 		photo: "",
+		showPhoto: false,
 		contact: {
 			phone: "",
 			email: "",
