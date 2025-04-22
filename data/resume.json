@@ -1,0 +1,23 @@
+{
+  "header": {
+    "name": "翁旻醇",
+    "title": "SORFWARE ENGINEER",
+    "photo": "/photo.jpg",
+    "contact": {
+      "phone": "+886 978795005",
+      "email": "dennis1989999@gmail.com",
+      "github": "Weng-B0829022",
+      "location": "Taipei, Taiwan"
+    },
+    "profile": "畢業於長庚資工所，熟悉許多軟體開發工具與AI工具如Git、Docker、AWS、ChatGPT、Claude、Cursor等等，從碩一開始就有自己在做一些大大小小的平台、軟體的開發，至今已經有將近兩年的時間，也從中學習到許多軟體開發的經驗，不過唯一的不足是，大部分時間都是我獨自開發，在團隊合作上略顯經驗不足，因此我希望能夠加入你們，不論是學習也好，發表意見也好，讓我們在團隊合作上能夠有1+1大於2的效果，希望在未來可以與你們一起成長，一起學習，一起進步。"
+  },
+  "experience": [],
+  "skills": [],
+  "education": [],
+  "projects": [],
+  "sideProjects": [],
+  "footer": {
+    "email": "dennis1989999@gmail.com",
+    "github": "Weng-B0829022"
+  }
+}

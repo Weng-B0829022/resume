@@ -1,88 +1,20 @@
 import React from 'react';
 
-interface skillsDataType {
+interface SkillItem {
 	name: string;
 	years: string;
 	description: string;
 	tags: string[];
 	fullWidth: boolean;
 }
-const Skills = () => {
-	// 定义技能数据
-	const skillsData: skillsDataType[] = [ 
-		{ 
-			name: "Python", 
-			years: "4 years", 
-			description: "熟悉使用Python進行網頁後端開發和數據分析，能夠實現各種演算法", 
-			tags: ["Flask","FastAPI","Django","matplotlib","Algorithm"],
-			fullWidth: true 
-		}, 
-		{ 
-			name: "React", 
-			years: "3 years", 
-			description: "擅長使用React框架開發app，以及熟悉其檔案架構(sigle resposibility, make component reusable)", 
-			tags: ["typescript","Next.js","TailwindCSS"], 
-			fullWidth: true 
-		}, 
-		{ 
-			name: "C++", 
-			years: "4 years", 
-			description: "熟悉C++程式語言，掌握指標的技巧及其應用", 
-			tags: [], 
-			fullWidth: true 
-		}, 
-		{ 
-			name: "Docker", 
-			years: "2 years", 
-			description: "用於建立、管理和運行應用程式容器，透過鏡像(image)和容器(container)實現應用隔離和部署", 
-			tags: [], 
-			fullWidth: false 
-		}, 
-		{ 
-			name: "Linux", 
-			years: "2 years", 
-			description: "熟悉Linux系統操作和AWS部署方案，能夠進行伺服器管理和維護", 
-			tags: [], 
-			fullWidth: false 
-		}, 
-		{ 
-			name: "Git", 
-			years: "2 years", 
-			description: "使用git進行版本控制以及多人協作", 
-			tags: [], 
-			fullWidth: false 
-		}, 
-		{ 
-			name: "Database", 
-			years: "2 years", 
-			description: "使用PostgreSQL進行資料整合和處理", 
-			tags: ["PostgreSQL"], 
-			fullWidth: false 
-		}, 
-		{ 
-			name: "Node.js", 
-			years: "2 years", 
-			description: "使用Node.js開發後端服務和API", 
-			tags: [], 
-			fullWidth: false 
-		}, 
-		{ 
-			name: "ASP.NET MVC", 
-			years: "1 years", 
-			description: "熟悉.NET開發高效能的平台", 
-			tags: [], 
-			fullWidth: false 
-		},
-		{ 
-			name: "ML & DL", 
-			years: "1 years", 
-			description: "LSTM, KNN, SVM, Transformer, Regression", 
-			tags: [], 
-			fullWidth: false 
-		} 
-	];
+
+interface SkillsProps {
+	data: SkillItem[];
+}
+
+const Skills: React.FC<SkillsProps> = ({ data }) => {
 	// 渲染单个技能项
-	const renderSkillItem = (skill: skillsDataType, index: number) => {
+	const renderSkillItem = (skill: SkillItem, index: number) => {
 		
 		if (skill.fullWidth) {
 			return (
@@ -123,8 +55,8 @@ const Skills = () => {
 
 	// 渲染技能组
 	const renderSkillGroups = () => {
-		const fullWidthSkills = skillsData.filter(skill => skill.fullWidth);
-		const groupedSkills = skillsData.filter(skill => !skill.fullWidth);
+		const fullWidthSkills = data.filter(skill => skill.fullWidth);
+		const groupedSkills = data.filter(skill => !skill.fullWidth);
 		
 		return (
 			<div className="grid grid-cols-1 gap-6">

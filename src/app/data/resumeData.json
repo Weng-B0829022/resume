@@ -1,0 +1,146 @@
+{
+  "header": {
+    "name": "翁旻醇",
+    "title": "SORFWARE ENGINEER",
+    "photo": "/photo.jpg",
+    "showPhoto": false,
+    "contact": {
+      "phone": "+886 978795005",
+      "email": "dennis1989999@gmail.com",
+      "github": "Weng-B0829022",
+      "location": "Taipei, Taiwan"
+    },
+    "profile": "畢業於長庚資工所，熟悉許多軟體開發工具與AI工具如Git、Docker、AWS、ChatGPT、Claude、Cursor等等，從碩一開始就有自己在做一些大大小小的平台、軟體的開發，至今已經有將近兩年的時間，也從中學習到許多軟體開發的經驗，不過唯一的不足是，大部分時間都是我獨自開發，在團隊合作上略顯經驗不足，因此我希望能夠加入你們，不論是學習也好，發表意見也好，讓我們在團隊合作上能夠有1+1大於2的效果，希望在未來可以與你們一起成長，一起學習，一起進步"
+  },
+  "experience": [
+    {
+      "title": "Freelancer — 全端工程師",
+      "period": "2024.02 – 迄今",
+      "description": "使用Nextjs Django開發AI新聞台 串接OpenAI, Leonardo api 以及內部自行開發的AI新聞主播整合成下關鍵字生成AI新聞台的分鏡稿影片"
+    },
+    {
+      "title": "歐德堡有限公司 — 軟體工程師",
+      "period": "2024.02 – 2025.02",
+      "description": [
+        "使用react開發前端, go當作後端開發智慧城鄉app，提供醫院人員管理及使用並檢測實時顯示病人的健康指標及飲食狀況",
+        "使用.NET開發政府的平台，並串接政府API及其內部的管理以及使用"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "years": "4 years",
+      "description": "熟悉使用Python進行網頁後端開發和數據分析，能夠實現各種演算法",
+      "tags": [
+        "Flask",
+        "FastAPI",
+        "Django",
+        "matplotlib",
+        "Algorithm"
+      ],
+      "fullWidth": true
+    },
+    {
+      "name": "React",
+      "years": "3 years",
+      "description": "擅長使用React框架開發app，以及熟悉其檔案架構(sigle resposibility, make component reusable)",
+      "tags": [
+        "typescript",
+        "Next.js",
+        "TailwindCSS"
+      ],
+      "fullWidth": true
+    },
+    {
+      "name": "C++",
+      "years": "4 years",
+      "description": "熟悉C++程式語言，掌握指標的技巧及其應用",
+      "tags": [],
+      "fullWidth": true
+    },
+    {
+      "name": "Docker",
+      "years": "2 years",
+      "description": "用於建立、管理和運行應用程式容器，透過鏡像(image)和容器(container)實現應用隔離和部署",
+      "tags": [],
+      "fullWidth": false
+    },
+    {
+      "name": "Linux",
+      "years": "2 years",
+      "description": "熟悉Linux系統操作和AWS部署方案，能夠進行伺服器管理和維護",
+      "tags": [],
+      "fullWidth": false
+    },
+    {
+      "name": "Git",
+      "years": "2 years",
+      "description": "使用git進行版本控制以及多人協作",
+      "tags": [],
+      "fullWidth": false
+    },
+    {
+      "name": "Database",
+      "years": "2 years",
+      "description": "使用PostgreSQL進行資料整合和處理",
+      "tags": [
+        "PostgreSQL"
+      ],
+      "fullWidth": false
+    },
+    {
+      "name": "Node.js",
+      "years": "2 years",
+      "description": "使用Node.js開發後端服務和API",
+      "tags": [],
+      "fullWidth": false
+    },
+    {
+      "name": "ASP.NET MVC",
+      "years": "1 years",
+      "description": "熟悉.NET開發高效能的平台",
+      "tags": [],
+      "fullWidth": false
+    },
+    {
+      "name": "ML & DL",
+      "years": "1 years",
+      "description": "LSTM, KNN, SVM, Transformer, Regression",
+      "tags": [],
+      "fullWidth": false
+    }
+  ],
+  "education": [
+    {
+      "school": "長庚大學資訊工程研究所",
+      "period": "2023.09 – 2025.07"
+    },
+    {
+      "school": "長庚大學資訊工程學系",
+      "period": "2020.09 – 2023.06"
+    }
+  ],
+  "projects": [
+    {
+      "title": "智慧城鄉",
+      "period": "2024.08 – 2025.02",
+      "description": "使用React, go, postgres開發網頁平台",
+      "organization": "智齡科技",
+      "image": "jubo1.png"
+    }
+  ],
+  "sideProjects": [
+    {
+      "title": "OmniNews",
+      "period": "2024.07 – 2025.04",
+      "description": "新聞內容生成與多媒體處理的全端專案，採用 Django 後端搭配 React 前端架構。在這是新聞內容生成與多媒體處理的全端專案，採用 Django 後端搭配 React 前端架構。在內容處理方面，從google api爬蟲的新聞使用GPT處理為分鏡稿的格式，整合 gTTS、moviepy 等工具處理音視頻。使用 Celery 處理異步任務，設計queue來處理請求。整合 JWT 認證和 Google OAuth 實現登入功能。使用 Google Cloud Storage 存儲文件，需要處理大文件傳輸和成本控制。",
+      "organization": "好好聽FM",
+      "image": "news1.png"
+    }
+  ],
+  "footer": {
+    "email": "dennis1989999@gmail.com",
+    "github": "Weng-B0829022"
+  }
+}
